@@ -29,19 +29,29 @@ Register for a new AWS account and sign in.
 #### Virtual Server(Instance) Creation
 
 Navigate to EC2 home and select Instances.
-On the Instances page click on the Launch Instance button.
-Fill the required text fields, generate an access key and select options eligible applicable to free tier. Afterwards, launch the instance.
+
 
 ![Alt text](img/2-ec2-home.png)
 
+On the Instances page click on the Launch Instance button.
+
 ![Alt text](img/3-ec2-instance.png)
+
+
+Fill the required text fields and select options eligible applicable to free tier.
+This example uses the Ubuntu distribution of linux. 
 
 ![Alt text](img/4-launch-instance.png)
 
 ![Alt text](img/5-launch-instance-2.png)
 
+Generate an access key to enable SSH connection.
+
 ![Alt text](img/6-launch-instance-3.png)
 
+Afterwards, launch the instance.
+
+Navigate to the instance home page to see the newly created instance
 ![Alt text](img/7-launched-instance.png)
 
 ----
@@ -60,15 +70,21 @@ Using the ssh command and pem file (key) access the new instance on its ip addre
 #### Software Management
 
 Software can be installed, updated and removed with the help of a package manager.
+Since this is an Ubuntu server, the package manager is apt.
 
 ##### Installing A Software
 
 Refresh the package lists by running the command "sudo apt update"
-Install a software by running the command "sudo apt install [software-name]"
+
 
 ![Alt text](img/9-update-repositories.png)
 
+Install a software by running the command "sudo apt install [software-name]" e.g. "sudo apt install tree"
+
 ![Alt text](img/10-install-software.png)
+
+
+Test the installed software by running the command "tree"
 
 ![Alt text](img/11-run-tree-cmd.png)
 
@@ -84,7 +100,7 @@ Keep the system up-to-date by running the command "sudo apt upgrade"
 
 ##### Removing A Software
 
-A software can be removed by running the command "sudo apt remove [software-name]"
+A software can be removed by running the command "sudo apt remove [software-name]" e.g. "sudo apt remove tree"
 
 ![Alt text](img/13-uninstall-software.png)
 
